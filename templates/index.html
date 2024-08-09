@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Blog Posts</h1>
+    <a href="{{ url_for('add') }}">Add a New Post</a> <!-- Link to the add page -->
     <div class="blog-posts">
         {% for post in posts %}
             <div class="post">
