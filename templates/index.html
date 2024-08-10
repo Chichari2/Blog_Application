@@ -7,20 +7,27 @@
     <title>Blog Posts</title>
 </head>
 <body>
-    <h1>Blog Posts</h1>
-    <a href="{{ url_for('add') }}">Add a New Post</a>
-    <div class="blog-posts">
+    <header>
+        <h1>Blog Posts</h1>
+        <nav>
+            <a href="{{ url_for('add') }}" class="btn">Add a New Post</a>
+        </nav>
+    </header>
+
+    <main class="blog-posts">
         {% for post in posts %}
-            <div class="post">
+            <article class="post">
                 <h2>{{ post.title }}</h2>
-                <p><em>by {{ post.author }}</em></p>
-                <div>{{ post.content }}</div>
-                <!-- Delete button -->
-                <form action="{{ url_for('delete', post_id=post.id) }}" method="post" style="display:inline;">
-                    <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this post?');">
-                </form>
-            </div>
+                <p class="author"><em>by {{ post.author }}</em></p>
+                <div class="content">{{ post.content }}</div>
+                <div class="actions">
+                    <a href="{{ url_for('update', post_id=post.id) }}" class="btn">Update</a>
+                    <form action="{{ url_for('delete', post_id=post.id) }}" method="post" class="delete-form">
+                        <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this post?');">
+                    </form>
+                </div>
+            </article>
         {% endfor %}
-    </div>
+    </main>
 </body>
 </html>

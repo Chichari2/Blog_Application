@@ -1,20 +1,26 @@
 [
     {
+        "id": 1,
+        "author": "Artem",
+        "title": "Post 3",
+        "content": "Hello! I like football!"
+    },
+    {
         "id": 2,
-        "author": "Jane Doe",
-        "title": "Second Post",
-        "content": "This is another post."
+        "author": "Artem",
+        "title": "A saw EM!",
+        "content": "Spain - winner!"
     },
     {
         "id": 3,
-        "author": "Artem",
-        "title": "Football",
-        "content": "I like MU!"
+        "author": "Elena",
+        "title": "Hello everybody",
+        "content": "I am a new blogger!"
     },
     {
         "id": 4,
-        "author": "Elena",
-        "title": "HI",
-        "content": "I am a new blogger!\r\nSubscribe)\r\n"
+        "author": "Artem",
+        "title": "Education",
+        "content": "I created this \"Blog Post\"\r\nP.S. Update- successful"
     }
 ]
